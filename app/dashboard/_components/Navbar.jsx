@@ -1,13 +1,14 @@
 import React from 'react'
 import { UserButton } from '@clerk/nextjs'
 import './Home.css'
+import Link from 'next/link'
 const Navbar = () => {
   return (
        <nav  id='Home_nav'>
         <img src="/" alt="hii" style={{marginLeft:'6vw'}}/>
         <ul>
-            <li>Dashboard</li>
-            <li>About</li>
+            <Link href='/dashboard'><li>Dashboard</li></Link>
+           <Link href='/Interviewpage'><li>About</li></Link> 
             <li>How it works</li>
         </ul>
         <div style={{display:"flex",alignItems:"center"}}>

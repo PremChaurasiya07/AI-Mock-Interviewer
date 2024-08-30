@@ -92,7 +92,7 @@ text-decoration: underline;
     height: 18vh;
     border: 1px solid black;
 }
-@media only screen and (max-width:376px) {
+@media only screen and (max-width:380px) {
     #Home{
         width: 100vw;
         height: 100vh;
@@ -110,5 +110,33 @@ text-decoration: underline;
         align-items: center;
        text-wrap: balance;
        margin-left: 3vw;
+    }
+    #side-img img{
+        top: 6vh;
+height: 160px;
+       width: 160px;
+
+    }
+    #Home_main svg{
+        top:15vh;
+       left: 22vw;
+        width:18vw;
+    }
+    #Home_main p{
+        font-size: 17px;
+        left: 65vw;
+        top: 34vh;
+    }
+    #Home_bottom h1{
+        position: relative;
+        font-size: 18px;
+        top: -4vw;
+float: initial;
+    }
+    #Home_bottom_li{
+        width: 100vw;
+        float: none;
+        top: -2vh;
+        height: 20vh;
     }
 }

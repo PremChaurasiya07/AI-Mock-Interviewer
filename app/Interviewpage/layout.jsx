@@ -1,11 +1,9 @@
 import React from 'react'
-import Header from './_components/Home'
-import Link from 'next/link'
+import Home from './_components/Home'
 const layout = ({child}) => {
   return (
     <div>
-     <Header/>
-     {child}
+   <Home></Home>
     </div>
   )
 }

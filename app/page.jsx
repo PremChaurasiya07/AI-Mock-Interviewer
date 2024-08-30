@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -7,7 +7,7 @@ export default function Home() {
       <title>My Awesome Next.js App</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
- hii yep
+<Link href="/dashboard">DASHBOARD</Link>
   </div>
   );
 }

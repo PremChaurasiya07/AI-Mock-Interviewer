@@ -1,23 +1,60 @@
 import React from 'react'
 import { useUser } from "@clerk/clerk-react";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import Link from 'next/link';
 import './Form.css'
+
 const Form = ({block}) => {
-  //console.log(block);
-  const {user}=useUser();
+  const [name, setname] = useState();
+  const [exp, setexp] = useState();
+  const [role, setrole] = useState();
+  const [tip, settip] = useState();
+  let i=0,j=0;
+  let Quoute=["Research the company and role thoroughly",
+              "Practice answering common interview questions",
+              "Dress professionally and arrive on time",
+              "Be confident and enthusiastic",
+               "Ask insightful questions at the end",
+               "Be punctual for interview"
+  ];
+  function set(data){
+  document.querySelector("#tips-para").innerHTML=`. ${data}`;
+  }
+
+  let check=()=>{
+      setInterval(()=>{
+        if(i!=6){
+        let s=Quoute[i];
+        set(s)
+          // console.log(Quoute[i]);
+        }
+        else{
+          i=0;
+        }
+        // block=false
+        i++;
+      },4500)
+    }
+   check();
     return (
-    <div style={(block)?{display:"block",position:"none"}:{display:"none"}} id='form' >
+    <div style={(block)?{display:"block",position:"none"}:{display:"none"}} id='form'  >
+     
       <form style={{position:"absolute"}}>
       <button id='close' onClick={()=>(block=false)} >X</button>
       <h1>hii</h1>
-      <hr style={{width:"36vw"}} />
-        <label htmlFor="name">Enter Name</label><input style={{border:"1px solid black"}} type="text"/><br />
-        <label htmlFor="exp">Enter the Experience</label> <input type="text" /><br />
-        <label htmlFor="role">Enter the role</label> <input type="text" /><br />
-        <button id='submit'>Submit</button>
-        <hr style={{width:"36vw",marginTop:"6vw"}} />  
+      <hr id='hr1' style={{width:"36vw"}} />
+        <label htmlFor="name">Enter Name</label><input style={{border:"1px solid black"}} type="text" onChange={(e)=>setname(e.target.value)} placeholder='EX- XYZ' /><br />
+        <label htmlFor="exp">Enter the Experience</label> <input type="number" onChange={(e)=>setexp(e.target.value)} placeholder='EX- 6'/><br />
+        <label htmlFor="role">Enter the role</label> <input type="text" onChange={(e)=>setrole(e.target.value)} placeholder='EX- Software Engineer'/><br />
+       <Link href="/Interviewpage"><button id='submit'>Submit</button></Link> 
+        <hr id='hr2' />  
+        <div id='tips'>
+        <h3 style={{fontSize:'21px',textDecoration:"underline",textTransform:'capitalize',fontWeight:"500",letterSpacing:"2px",marginLeft:"4px"}}>tips</h3>
+        <p id='tips-para' style={{fontSize:"20px",marginTop:"10px",marginLeft:'6px',fontWeight:'400',wordSpacing:'3px',letterSpacing:"1.6px"
+        }}></p>
+          </div> 
       </form> 
-                               
+                              
     </div>
   )
 }

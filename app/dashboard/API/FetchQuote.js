@@ -27,13 +27,13 @@ const {
    // See https://ai.google.dev/gemini-api/docs/safety-settings
     
     });
-    export async function fetchData() {
-      const result = await chatSession.sendMessage("give five interview question");
-      res=result.response.text();
-      console.log(res);
-      return res;
-    }
-  
+    // export async function fetchData() {
+    //   const result = await chatSession.sendMessage("give five interview question");
+    //   res=result.response.text();
+    //   console.log(res);
+    //   return res;
+    // }
+  // export  const result = await chatSession.sendMessage("give five interview question");
    
   
     

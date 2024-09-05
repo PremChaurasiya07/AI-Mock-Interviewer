@@ -1,0 +1,15 @@
+#start{
+    width: 30vw;
+    height: 10vw;
+    border: 2px solid black;
+    background-color: red;
+    position: absolute;
+    left: 36vw;
+    top: 15vw;
+    z-index: 10;
+}
+#start button{
+    border: 1px solid black;
+    position: relative;
+    left: 48%;
+}

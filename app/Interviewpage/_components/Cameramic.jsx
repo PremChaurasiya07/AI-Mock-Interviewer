@@ -1,37 +1,78 @@
 'use client'
 import React from 'react'
-import { useState } from 'react'
-import { Camera,WebcamIcon } from 'lucide-react';
+import { useState,useEffect } from 'react'
+import { Camera,Mic,WebcamIcon } from 'lucide-react';
 import Webcam from 'react-webcam';
+import './Cameramic.css'
+import useSpeechToText from 'react-hook-speech-to-text';
+
 
 const Cameramic = () => {
+const [first, setfirst] = useState('hii')
+  const {
+    error,
+    interimResult,
+    isRecording,
+    results,
+    startSpeechToText,
+    stopSpeechToText,
+  } = useSpeechToText({
+    continuous: true,
+    useLegacyResults: false
+  });
+  useEffect(() => {
+    results.map((result)=>{
+      console.log(result)
+      setfirst(prevAns=>prevAns+result?.transcript);
+    })
+  }, [results])
+  
+  if(error){
+    console.log("something went wrong");
+  }
+  else{
+    console.log('all good');
+  }
+
   const [WebCamEnabled,setWebCamEnabled]=useState(false)
   return (
-    <div >
-     {
- WebCamEnabled? <Webcam
+    <>
+    <div style={{height:"100vh",width:'60vw'}} >
+      <div style={{marginLeft:"9vw",width:"50vw",marginTop:'8vh'}}>
+      {
+ WebCamEnabled? <Webcam mirrored={true}
   onUserMedia={()=>setWebCamEnabled(true)}
  onUserMediaError={()=>setWebCamEnabled(false)}
- 
- style={{
-  width:'800px',
-  height:'604px',
-  marginTop:"50px",
-  border:"5px solid black",
-  marginLeft:"60px"
- }}
+
+
  />
  :
  <>
  <div>
- <WebcamIcon style={{marginLeft:"18vw",width:"24vw"}} className='h-72 my-20 p-20 bg-secondary rounded-lg border'/>
+ <WebcamIcon style={{width:"30vw",height:"40vh",marginLeft:"7vw"}} className='h-60 my-20 p-26 bg-secondary rounded-lg border'/>
  </div>
- <button style={{marginLeft:"22vw",border:"2px solid black",borderRadius:"24px",width:"18vw",marginBottom:"8vh",height:"6vh",}} onClick={()=>setWebCamEnabled(true)}>Enabled Camera And Mic</button>
+ 
  </>
      } 
+  </div>
+   
+     <button id='camera_btn' onClick={()=>setWebCamEnabled(!WebCamEnabled)}>Enabled Camera And Mic</button>
+ <div>
+  
+ <h1 id='record_statement'>Recording: {isRecording.toString()}</h1>
+      <button id='record_btn' onClick={isRecording ? stopSpeechToText : startSpeechToText}>
+        {isRecording ? <h2 style={{position:"relative"}}><Mic/>'Recording...'</h2>: 'Start Recording'}
+      </button>
+     
     
-      
+ </div>
      </div>
+   
+<button onClick={()=>console.log(first)}>Show answer</button>
+     </>
+     
+     
+     
   )
 }
 

@@ -1,0 +1,32 @@
+#record{
+   border: 1px solid black;
+   position: absolute;
+   top: 80vh;
+   width:4.5vw;
+   height:8vh;
+   margin-left: 40vw;
+   border-radius: 100%;
+}
+#camera_btn{
+    position: absolute;
+    top: 80vh;
+    margin-left:22vw;
+    border:2px solid black;
+    border-radius:24px;
+    width:14vw;
+    height:6vh
+}
+#record_btn{
+    margin-left: 3vw;
+    border: 2px solid black;
+ position: absolute;
+ top: 80vh;
+ border-radius:24px;
+ width:14vw;
+ height:6vh;
+}
+#record_statement{
+    position: absolute;
+    top: 75vh;
+    margin-left: 6vw;
+}

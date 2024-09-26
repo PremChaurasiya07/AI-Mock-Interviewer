@@ -1,0 +1,35 @@
+#box{
+   width: 100vw;
+   height: 100vh;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+#box h1{
+
+    position: relative;
+    top: 30vh;
+    font-size: 60px; 
+    letter-spacing: 3px;
+    font-weight: 600;
+ 
+}
+#box p{
+    position: relative;
+    top: 32vh;
+    font-size: 30px;
+}
+#box button{
+    position: relative;
+    top: 40vh;
+    width: 16vw;
+    height: 9vh;
+    border-radius: 6px;
+     color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+
+}
+#box button:hover{
+    background-color: #0056b3;
+}

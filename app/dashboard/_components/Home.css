@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    
+    font-family: Arial, sans-serif;
     box-sizing: content-box;
 }
 #Home{
@@ -19,12 +19,13 @@ height: 100vh;
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: large;
     font-weight: 600;
 }
 #Home_nav ul{
     display: flex;
-    margin-left: 20vw;
+    margin-left: 26vw;
+    padding-top: 0;
     
 }
 #Home_nav ul li{
@@ -32,7 +33,7 @@ height: 100vh;
     transition: all 0.09s ease-in-out;
       &:hover{
         transform: scale(1.1);
-        color: red;
+        color: rgba(17, 17, 17, 0.881);
       } ; 
     
     cursor: pointer;
@@ -43,7 +44,7 @@ height: 100vh;
 }
 #Home_main svg{
 position: relative;
-top: 10vh;
+top: 20vh;
 left: 14vw;
 width: 20vw;
 height: 20vh;
@@ -51,7 +52,7 @@ cursor: pointer;
 }
 #Home_main p{
     position: inherit;
-    top: 30vh;
+    top: 39vh;
     left: 68vw;
     font-size: 28px;
     font-weight: 600;

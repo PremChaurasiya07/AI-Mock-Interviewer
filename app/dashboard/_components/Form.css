@@ -1,15 +1,15 @@
 #form{
     position: absolute;
     width: 36vw;
-    height: 76vh;
-    background: radial-gradient(circle, rgba(223,181,199,1) 5%, rgba(148,187,233,1) 100%);
+    height: 70vh;
+    background:#f9f9f9;
     border: 2px solid black;
     z-index: 20;
-    font-size:21px;
+    font-size:18px;
     font-weight: 450;
     left: 56vw;
     top: 1.2vw;
-    
+    font-family: sans-serif;
 }
 #hr1{
     width: 36vw;
@@ -25,13 +25,17 @@
 #form label{
  display: inline-block;
   width:13vw;
-  font-weight: 500;
+  font-weight: 600;
     margin-top: 3vw;
+    padding-left: 1vw;
 }
 #form input{
     position: relative;
-    left: 1vw;
+    /* left: 1vw; */
     width: 20vw;
+    margin-top: 8vh;
+    padding: 4px;
+    border: 1px solid black;
 }
 #submit{
 border: 1px solid black;
@@ -39,7 +43,7 @@ width: 6vw;
 height: 5vh;
 position: relative;
 left: 15vw;
-top: 6vh;
+top: 14vh;
 border-radius: 2vw;
 background-color: yellow; 
 transition: all 0.1.5s ease-in-out;
@@ -49,7 +53,7 @@ transition: all 0.1.5s ease-in-out;
 }
 
 #close{
-    border-left: 2px solid black;
+    border-left: 3px solid black;
     background-color:red;
     width: 2.7vw;
     height: 2.7vw;
@@ -62,11 +66,12 @@ transition: all 0.1.5s ease-in-out;
 @media only screen and (max-width:380px){
     #form{
         width: 80vw;
-        height: 80vh;
+        height: 84vh;
         font-size:15px;
         left: 10vw;
     }
     #form h1{
+        display: none;
         text-align: center;
         font-size: 20px;
         margin-top: 2vh;
@@ -76,9 +81,9 @@ transition: all 0.1.5s ease-in-out;
         display: inline-block;
          width:100vw;
          font-weight:500;
-           margin-top: 4vw;
+           margin-top: 1vh;
            margin-left: -10vw;
-           font-size: 16px;
+           font-size: 14px;
            text-align: center;
           
        }
@@ -86,11 +91,11 @@ transition: all 0.1.5s ease-in-out;
       
            position: relative;
            left: 12vw;
-           top: 2vh;
+         top: -2vh;
            width: 55vw;
        }
        #close{
-       left: -9.9vw;
+       left: -11vw;
        width: 6vw;
        height: 5vh;
        border-bottom: 1px solid black;
@@ -101,5 +106,6 @@ display: none;
        #submit{
         width: 20vw;
         left: 30vw;
+        top: -1vh;
        }
 }

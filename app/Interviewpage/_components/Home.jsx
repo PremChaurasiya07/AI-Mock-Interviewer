@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { act } from 'react'
 import { chatSession } from '../../dashboard/API/FetchQuote';
 // import { useState } from 'react';
  import Cameramic from './Cameramic.jsx';
@@ -8,8 +8,10 @@ import { chatSession } from '../../dashboard/API/FetchQuote';
  import {name,exp,role} from '../../dashboard/_components/Form';
 import Question from './Question'
 import './Home.css'
+
 const Home = () => {
-  let response,b,c,input,role="data engineer";
+  
+
   const [dialouge, setdialouge] = useState(true)
   const [data, setdata] = useState([])
   // console.log(name)
@@ -42,12 +44,18 @@ const Home = () => {
    //}
     
   }
+
  return (
+  
  
     < div style={{display:"flex",maxWidth:"100vw",maxHeight:"100vh"
     }}>
+      
     <Question/>
    <Cameramic/>
+   <>
+  
+</>
     </div>
   )
 }

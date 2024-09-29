@@ -6,9 +6,11 @@ import { useState } from 'react'
  import './Home.css';
  import Navbar from './Navbar';
  import Link from 'next/link';
+
 const Header = () => {
   const [block, setblock] = useState(false);
   console.log(block);
+
   return (
     <div id='Home' >
         <Navbar/>
@@ -22,12 +24,12 @@ const Header = () => {
     <Form block={block}/>
     </div>
       </main>
-    <div id='Home_bottom'>
+    {/* <div id='Home_bottom'>
       <h1>Previous Mock</h1>
       <div id="Home_bottom_li">
         <p>Nothin yet Lorem ipsum dolor sit, amet consectetur</p>
       </div>
-    </div>
+    </div> */}
     </div>
   )
 }

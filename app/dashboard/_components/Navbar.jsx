@@ -8,16 +8,11 @@ const Navbar = () => {
         <img src="/" alt="hii" style={{marginLeft:'6vw'}}/>
         <ul>
             <Link href='/dashboard'><li>Dashboard</li></Link>
-           <Link href='/Interviewpage'><li>About</li></Link> 
+           <Link href='/about'><li>About</li></Link> 
             <li>How it works</li>
         </ul>
-        <div style={{display:"flex",alignItems:"center"}}>
-            <div style={{marginRight:"20px"}}>
-            Toggle
-            </div>
-        <div style={{marginRight:"10px"}}>
-        <UserButton/>  
-        </div>
+        <div style={{paddingRight:'2vw',paddingTop:"2vh"}}>
+       <UserButton/>  
         </div>
         </nav>
   )

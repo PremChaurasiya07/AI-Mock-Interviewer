@@ -12,6 +12,7 @@ import { db } from '@/utils/db';
 import { MockInterview } from '@/utils/schema';
 export let id=uuidv4();
 export let Mockresp;
+export let response;
 const Form = ({block}) => {
   
   const {user}=useUser();
@@ -40,16 +41,18 @@ const Form = ({block}) => {
   //}
   
 
-  let database=async()=>{
+  let database=async(exp,role)=>{
     try{
-     let input='Job role: full-stack developers, Job experience:4 depend upon Job position and experience give me 5 interview question with answer nothing else in json';
+     let input=`Job role: ${role}, Job experience:${exp} depend upon Job position and experience give me 5 interview question with answer nothing else in json`;
       const call= await chatSession.sendMessage(input);
        Mockresp=(call.response.text()).replace('```json','').replace('```','');
       console.log(Mockresp)
       if(Mockresp){
-    let response=JSON.parse(Mockresp);
+     response=JSON.parse(Mockresp);
        setMockres(response);
       console.log(response);
+      let tv=response[0];
+      console.log(tv.question);
       console.log(Mockres);
      const dbres=await db.insert(MockInterview).values({
       mockId:id,
@@ -90,21 +93,16 @@ const Form = ({block}) => {
     <div style={(block)?{display:"block",position:"none"}:{display:"none"}} id='form'  >
      <form style={{position:"absolute"}}>
       <button id='close' onClick={()=>(block=false)}>X</button>
-      <h1>hii</h1>
+      <h1>Hii</h1>
       <hr id='hr1' style={{width:"36vw"}} />
-        <label htmlFor="name">Enter Name</label><input style={{border:"1px solid black"}} type="text"  onChange={(e)=>setname(e.target.value)} placeholder='EX- XYZ' /><br />
+        <label htmlFor="name">Enter Name</label><input type="text"  onChange={(e)=>setname(e.target.value)} placeholder='EX- XYZ' /><br />
         <label htmlFor="exp">Enter the Experience</label> <input type="number" onChange={(e)=>setexp(e.target.value)} placeholder='EX- 6'/><br />
         <label htmlFor="role">Enter the role</label> <input type="text" onChange={(e)=>setrole(e.target.value)} placeholder='EX- Software Engineer'/><br />
 
      
      
-        <Link onClick={()=>database()} href="./Interviewpage"><button id='submit'>Submit</button></Link>
-        <hr id='hr2' />  
-        <div id='tips'>
-        <h3 style={{fontSize:'21px',textDecoration:"underline",textTransform:'capitalize',fontWeight:"500",letterSpacing:"2px",marginLeft:"4px"}}>tips</h3>
-        <p id='tips-para' style={{fontSize:"20px",marginTop:"10px",marginLeft:'6px',fontWeight:'400',wordSpacing:'3px',letterSpacing:"1.6px"
-        }}></p>
-          </div> 
+        <Link onClick={()=>database(exp,role)} href="./Interviewpage"><button id='submit'>Submit</button></Link>
+       
       </form> 
                               
     </div>

@@ -24,12 +24,12 @@ height: 100vh;
 }
 #Home_nav ul{
     display: flex;
-    margin-left: 26vw;
+    margin-left: 33vw;
     padding-top: 0;
     
 }
 #Home_nav ul li{
-    margin-left:9vw;
+    margin-left:12vw;
     transition: all 0.09s ease-in-out;
       &:hover{
         transform: scale(1.1);

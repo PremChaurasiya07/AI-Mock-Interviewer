@@ -12,25 +12,25 @@ const About = () => {
     <h2>Our Team</h2>
     <div class="team-member">
         <h3>Prem Chaurasiya</h3>
-        <p>Project Manager</p>
- <a href=""><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" style={{position:'relative',paddingLeft:'80px'}}/></a>
+        {/* <p>Project Manager</p> */}
+ <a href="https://github.com/PremChaurasiya07"><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" style={{position:'relative',paddingLeft:'80px'}}/></a>
     </div>
     <div class="team-member">
    
         <h3>Vikas Chauhan</h3>
-        <p>Lead Developer</p>
+        {/* <p>Lead Developer</p> */}
         <a href=""><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" style={{position:'relative',paddingLeft:'80px'}}/></a>
     </div>
     <div class="team-member">
   
         <h3>Mohit Dhage</h3>
-        <p>UI/UX Designer</p>
+        {/* <p>UI/UX Designer</p> */}
         <a href=""><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" style={{position:'relative',paddingLeft:'80px'}}/></a>
     </div>
     <div class="team-member">
  
         <h3>Raj Chorge</h3>
-        <p>UI/UX Designer</p>
+        {/* <p>UI/UX Designer</p> */}
         <a href=""><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" style={{position:'relative',paddingLeft:'80px'}}/></a>
     </div>
 </div>

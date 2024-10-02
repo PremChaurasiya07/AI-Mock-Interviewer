@@ -28,14 +28,14 @@ const Form = ({block}) => {
 //   else{
 //     setpass(false);
 //   }
-  let i=0,j=0;
-  let Quoute=["Research the company and role thoroughly",
-              "Practice answering common interview questions",
-              "Dress professionally and arrive on time",
-              "Be confident and enthusiastic",
-               "Ask insightful questions at the end",
-               "Be punctual for interview"
-  ];
+  // let i=0,j=0;
+  // let Quoute=["Research the company and role thoroughly",
+  //             "Practice answering common interview questions",
+  //             "Dress professionally and arrive on time",
+  //             "Be confident and enthusiastic",
+  //              "Ask insightful questions at the end",
+  //              "Be punctual for interview"
+  // ];
   // function set(data){
   //  document.querySelector("#tips-para").innerHTML=`. ${data}`;
   //}
@@ -93,7 +93,7 @@ const Form = ({block}) => {
     <div style={(block)?{display:"block",position:"none"}:{display:"none"}} id='form'  >
      <form style={{position:"absolute"}}>
       <button id='close' onClick={()=>(block=false)}>X</button>
-      <h1>Hii</h1>
+      {/* <h1>Hii</h1> */}
       <hr id='hr1' style={{width:"36vw"}} />
         <label htmlFor="name">Enter Name</label><input type="text"  onChange={(e)=>setname(e.target.value)} placeholder='EX- XYZ' /><br />
         <label htmlFor="exp">Enter the Experience</label> <input type="number" onChange={(e)=>setexp(e.target.value)} placeholder='EX- 6'/><br />

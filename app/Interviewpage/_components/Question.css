@@ -132,7 +132,7 @@ font-size: 18px;
    
 }
 
-@media only screen and (max-width:380px) {
+@media only screen and (max-width:425px) {
     #left{
         width: 100vw;
     }
@@ -169,7 +169,7 @@ font-size: 18px;
   
         position: relative;
         left: 22vw;
-        top: 8vh;
+        top: 13vh;
          border: 2px solid black;
      font-size: 10px;
          width: 15vw;
@@ -178,7 +178,7 @@ font-size: 18px;
      } 
      #start1{
         position: relative;
-        top: 27vh;
+        top: 22vh;
         border: 2px solid black;
     font-size: 14px;
         width: 15vw;
@@ -219,6 +219,7 @@ font-size: 18px;
     #transfer button{
         border: 1.5px solid black;
       width: 20vw;
+      
        
     }
     #yes{

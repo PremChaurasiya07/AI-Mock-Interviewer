@@ -50,6 +50,30 @@ width: 20vw;
 height: 20vh;
 cursor: pointer;
 }
+#btn_start{
+    position: relative;
+top: 30vh;
+left: 20vw;
+width: 14vw;
+height: 8vh;
+cursor: pointer;
+background-color: red;
+padding: 15px 30px;
+font-size: 16px;
+color: #fff;
+background-color: #6abf83;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.2s, background-color 0.3s;
+}
+#btn_start:hover{
+    background-color: #4ea96d;
+    transform: scale(1.05);
+}
+#btn_start:active{
+    transform: scale(0.95);
+}
 #Home_main p{
     position: inherit;
     top: 39vh;
@@ -93,7 +117,7 @@ text-decoration: underline;
     height: 18vh;
     border: 1px solid black;
 }
-@media only screen and (max-width:380px) {
+@media only screen and (max-width:425px) {
     #Home{
         width: 100vw;
         height: 100vh;
@@ -101,27 +125,32 @@ text-decoration: underline;
     }
     #Home_nav{
         width:100vw;
-        font-size: 11px;
+        font-size: 22px;
     } 
     #Home_nav ul{
-        margin-left: 6vw;
+        margin-left: 1vw;
         
     }
     #Home_nav ul li{
         align-items: center;
        text-wrap: balance;
-       margin-left: 3vw;
+       margin-left: 6vw;
     }
     #side-img img{
-        top: 6vh;
-height: 160px;
-       width: 160px;
+        top: 2vh;
+height: 400px;
+       width: 400px;
+       left: 30vw;
 
     }
     #Home_main svg{
         top:15vh;
        left: 22vw;
         width:18vw;
+    }
+    #btn_start{
+        top: 70vh;
+        left: -10vw;
     }
     #Home_main p{
         font-size: 17px;

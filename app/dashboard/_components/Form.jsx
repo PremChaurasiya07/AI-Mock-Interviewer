@@ -48,7 +48,7 @@ const Form = ({block}) => {
        Mockresp=(call.response.text()).replace('```json','').replace('```','');
       console.log(Mockresp)
       if(Mockresp){
-     response=JSON.parse(Mockresp);
+      response=JSON.parse(Mockresp);
        setMockres(response);
       console.log(response);
       let tv=response[0];
@@ -74,21 +74,21 @@ const Form = ({block}) => {
    }
   }
 
-  let check=()=>{
-      setInterval(()=>{
-        if(i!=6){
-        let s=Quoute[i];
-        settip(s)
-          // console.log(Quoute[i]);
-        }
-        else{
-          i=0;
-        }
-        // block=false
-        i++;
-      },4500)
-    }
-   check();
+  // let check=()=>{
+  //     setInterval(()=>{
+  //       if(i!=6){
+  //       let s=Quoute[i];
+  //       settip(s)
+  //         // console.log(Quoute[i]);
+  //       }
+  //       else{
+  //         i=0;
+  //       }
+  //       // block=false
+  //       i++;
+  //     },4500)
+  //   }
+  //  check();
     return (
     <div style={(block)?{display:"block",position:"none"}:{display:"none"}} id='form'  >
      <form style={{position:"absolute"}}>

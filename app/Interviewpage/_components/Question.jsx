@@ -32,7 +32,7 @@ const insert=async()=>{
   const result=await db.select().from(MockInterview).where(eq(MockInterview.mockId,id));
   console.log(result) 
   let res=JSON.parse(result[0].jsonMockResp);
-  let input=`Question: ${mockjson}, Answer: ${userans}, Depending upon the given question and answer give a short 2-3 line feedback like area of improvement etc and give rating in number from 0 to 5 nothing else in json format `;
+  let input=`Question: ${mockjson}, Answer: ${userans}, Depending upon the given Question and Answer ie.userans give a short 2-3 line feedback like area of improvement etc and give rating in number from 0 to 5 i.e if Answer ie.usreans is empty or blank nothing else in json format `;
   const feed=await chatSession.sendMessage(input);
   let feedans=JSON.parse((feed.response.text()).replace('```json','').replace('```',''));
  

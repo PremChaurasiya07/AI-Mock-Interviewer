@@ -135,7 +135,6 @@ text-decoration: underline;
     }
     #Home_nav ul li{
         align-items: center;
-       text-wrap: balance;
        margin-left: 6vw;
     }
     #side-img img{
@@ -145,14 +144,12 @@ height: 400px;
        left: 30vw;
 
     }
-    #Home_main svg{
-        top:15vh;
-       left: 22vw;
-        width:18vw;
-    }
     #btn_start{
         top: 70vh;
-        left: -10vw;
+        left: -14vw;
+        width: 22vw;
+        font-size: 28px;
+        height: 8vh;
     }
     #Home_main p{
         font-size: 17px;

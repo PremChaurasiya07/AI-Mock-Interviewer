@@ -33,3 +33,20 @@
 #box button:hover{
     background-color: #0056b3;
 }
+@media only screen and (max-width:425px) {
+ #box{
+    width: 100vw;
+    height: 100vh;
+ }
+ #box h1{
+    font-size: 40px;
+ }
+ #box p{
+    font-size: 20px;
+ }
+ #box button{
+    width: 22vw;
+    height: 10vh;
+    font-size: 26px;
+ }
+}

@@ -96,7 +96,13 @@ else{
       </div>
       <button id='start1' onClick={()=>GetInterviewDetails()}  style={(block)?{display:"block"}:{display:"none"}}>Start</button>
        <button id='end' onClick={()=>insert()}>End Interview</button>
+       <div id="notebox">
+      <h3 id='title'>Note</h3>
+      <p>1) Check you internet connectivity is proper and high. <br/>2) Wait for a while before clicking the start button. <br/>3) Do not continuously press start button. 
+      </p>
+    </div>
       </div>
+      
       <div id='transfer' style={(display)?{display:"block"}:{display:"none"}}>
 <h1>Do you really want to end this interview</h1>
 <Link href='/Review'><button id='yes'>Yes</button></Link>

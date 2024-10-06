@@ -26,8 +26,8 @@ const Cameramic = () => {
   useEffect(() => {
     results.map((result)=>{
       console.log(result)
-      // setuserans(prevAns=>prevAns+result?.transcript);
-       setuserans(result.transcript);
+    setuserans(prevAns=>prevAns+result?.transcript);
+        //setuserans(result.transcript);
     })
   }, [results])
   // useEffect(() => {
